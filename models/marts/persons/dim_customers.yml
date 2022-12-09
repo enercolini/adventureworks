@@ -1,0 +1,22 @@
+version: 2
+
+models: 
+  - name: dim_customers
+    description: Customers name and address 
+    
+    columns:
+      - name: customer_sk
+        description: dim_customers primary key. Foreign key to fact_sales.
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        description: Customer ID. Primary key to sales.customer.
+      - name: customer_name
+        description: Customer's full name.
+      - name: city
+        description: Customer city.
+      - name: state
+        description: Customer state.
+      - name: country
+        description: Customer country.
