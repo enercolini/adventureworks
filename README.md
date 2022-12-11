@@ -142,7 +142,7 @@ To understand more deeply the process of accumulating different branches for dif
 
 ## ADVENTUREWORKS ELT
 
-At first, the AdventureWorks data were extracted from the transactional database (postgres) to the Data Warehouse (Big Query). In the DW, there is a raw_postgres folder with all raw data from the transactional database separated by schema. The extraction part of the pipeline (EL) was done through Stitch Data, connected TO Big Query.
+At first, the AdventureWorks data were extracted from the transactional database (postgres) to the Data Warehouse (Big Query). In the DW, there is a `raw_postgres` folder with all raw data from the transactional database separated by schema. The extraction part of the pipeline (EL) was done through Stitch Data, connected to Big Query.
 
 In the data transformation phase, dbt was used, where the staging folder contains the sources YAML file (src_raw_postgres). At this stage, only the tables that would be used to assemble the fact tables and dimensions (DW Conceptual Diagram) were chosen.
 
