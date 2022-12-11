@@ -1,5 +1,3 @@
-Welcome to your new dbt project!
-
 # ADVENTUREWORKS
 
 Adventure Works (AW) is a bicycle manufacturer with over 500 distinct products, 20,000 customers and 31,000 orders.
