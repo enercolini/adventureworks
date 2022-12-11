@@ -61,7 +61,7 @@ The process to run the models can be done in several ways, either in a modular w
 
 The command below runs all models at once:
 
-dbt run --full-refresh
+`dbt run --full-refresh`
 
 To run only the specified model:
 
