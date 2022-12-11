@@ -3,7 +3,7 @@ with address_cte as(
         address_id
         , state_province_id
         , city
-    from {{ ref('stg_person__address') }}
+    from {{ ref('stg_erp__address') }}
 )
 
 , state_province_cte as(
@@ -11,14 +11,14 @@ with address_cte as(
         state_province_id
         , country_region_code
         , state
-    from {{ ref('stg_person__state_province') }}
+    from {{ ref('stg_erp__state_province') }}
 )
 
 , country_region_cte as(
     select
         country_region_code
         , country
-    from {{ ref('stg_person__country_region') }}
+    from {{ ref('stg_erp__country_region') }}
 )
 
 , joined_tables as(
