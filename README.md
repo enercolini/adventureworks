@@ -95,9 +95,9 @@ Good documentation for dbt models helps us to manage and understand the data set
 
 The data about each column must be documented in the different schemas.yml files for the different layers of data processing and transformation:
 
-Sources;
-Staging;
-Marts.
+- Sources;
+- Staging;
+- Marts.
 
 Each layer will have its own schemas.yml file. The more simplified documentation includes information about the tables, containing name and description. The more robust documentation includes the name of the tables, the name of their columns, their respective descriptions and also the tests of these columns.
 
