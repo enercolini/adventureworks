@@ -159,7 +159,7 @@ To answer the business questions, 5 dimensions and 1 fact were created:
 
 The project was versioned through GitHub, which can be seen at the link: <https://github.com/enercolini/adventureworks>. Each user has their stg dataset in DW. Thus, a profile must be configured for each user (as already specified above).
 
-Thus, the project was separated into a development environment and a production (deployment) environment. For each modification in the project, a Pull Request (PR) must be opened, which should be approved in the repository before being merged into production. When the PR is approved, a job was configured in dbt to run the dbt commands (build, tests, run) and allocate the modified data in the project's production dataset in BigQuery `public_marts_analytics`.
+Thus, the project was separated into a development environment and a production (deployment) environment. For each modification in the project, a Pull Request (PR) must be opened, which should be approved in the repository before being merged into production. When the PR is approved, a job was configured in dbt to run the dbt commands (build, tests, run) and allocate the modified data in the project's production dataset in BigQuery `public_marts_adventureworks`.
 
 ## BUSINESS INTELIGENCE
 
