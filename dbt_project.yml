@@ -36,9 +36,9 @@ models:
     
     marts:
       materialized: table
-      person:
+      persons:
         tags:
-          - "person"
+          - "persons"
       products:
         tags:
           - "products"

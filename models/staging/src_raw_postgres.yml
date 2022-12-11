@@ -51,66 +51,6 @@ sources:
           - name: modifieddate
             description: Date and time the record was last updated.
 
-      - name: sales_store
-        description: Customers (resellers) of Adventure Works products raw data.
-        columns:
-          - name: businessentityid
-            description: Primary key for all customers, vendors, and employees.
-            tests:
-              - not_null
-          - name: name
-            description: Name of the store.
-          - name: salespersonid
-            description: ID of the sales person assigned to the customer. Foreign key to SalesPerson.BusinessEntityID.
-          - name: demographics
-            description: Demographic informationg about the store such as the number of employees, annual sales and store type.
-          - name: rowguid
-            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
-            tests:
-              - unique
-              - not_null
-          - name: modifieddate
-            description: Date and time the record was last updated.
-
-      - name: person_businessentityaddress
-        description: Cross-reference table mapping customers, vendors, and employees to their addresses raw data.
-        columns:
-          - name: businessentityid
-            description: Primary key. Foreign key to BusinessEntity.BusinessEntityID.
-            tests:
-              - not_null
-          - name: addressid
-            description: Primary key. Foreign key to Address.AddressID.
-            tests:
-              - not_null
-              - unique
-          - name: addresstypeid
-            description: Primary key. Foreign key to AddressType.AddressTypeID.
-            tests:
-              - not_null
-          - name: rowguid
-            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
-            tests:
-              - unique
-              - not_null
-          - name: modifieddate
-            description: Date and time the record was last updated.
-
-      - name: person_businessentity
-        description: Source of the ID that connects vendors, customers, and employees with address and contact information.
-        columns:
-          - name: businessentityid
-            description: Primary key for all customers, vendors, and employees.
-            tests:
-              - not_null
-          - name: rowguid
-            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
-            tests:
-              - unique
-              - not_null
-          - name: modifieddate
-            description: Date and time the record was last updated.
-
       - name: production_product
         description: Products sold or used in the manfacturing of sold products raw data.
         columns:
@@ -266,6 +206,7 @@ sources:
             description: Incremental number to track changes to the sales order over time.
           - name: orderdate
             description: Dates the sales order was created.
+              - not_null
           - name: duedate
             description: Date the order is due to the customer.
           - name: shipdate
@@ -370,36 +311,6 @@ sources:
             description: Sales reason name, such as 'price', 'promotion', and others.
           - name: reasontype
             description: Sales reason type, such as 'marketing', 'promotion', and others.
-          - name: modifieddate
-            description: Date and time the record was last updated.
-
-      - name: sales_salesterritory
-        description: Sales territory lookup table raw data.
-        columns:
-          - name: territoryid
-            description: Primary key for SalesTerritory records.
-            tests:
-              - unique
-              - not_null
-          - name: name
-            description: Sales territory description.
-          - name: countryregioncode
-            description: ISO standard country or region code. Foreign key to CountryRegion.CountryRegionCode.
-          - name: group
-            description: Geographic area to which the sales territory belong.
-          - name: salesytd
-            description: Sales in the territory year to date.
-          - name: saleslastyear
-            description: Sales in the territory the previous year.
-          - name: costytd
-            description: Business costs in the territory year to date.
-          - name: costlastyear
-            description: Business costs in the territory the previous year.
-          - name: rowguid
-            description: ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
-            tests:
-              - unique
-              - not_null
           - name: modifieddate
             description: Date and time the record was last updated.
 
