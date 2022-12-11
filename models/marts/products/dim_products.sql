@@ -3,7 +3,7 @@ with products_cte as (
         row_number() over (order by product_id) as product_sk
         , product_id
         , product_name
-    from {{ ref('stg_production__products') }}
+    from {{ ref('stg_erp__products') }}
 )
 
 select *

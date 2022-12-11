@@ -39,7 +39,7 @@ with address as(
         , order_quantity
         , order_unit_price
         , products.product_sk as product_fk
-    from {{ ref('stg_sales__sales_order_detail') }} as sales_order_detail
+    from {{ ref('stg_erp__sales_order_detail') }} as sales_order_detail
     left join products on sales_order_detail.product_id = products.product_id
 )
 
@@ -75,7 +75,7 @@ with address as(
             when order_status = 5 then 'Shipped'
             else 'Cancelled'
         end as order_status
-    from {{ ref('stg_sales__sales_order_header') }} as sales_order_header
+    from {{ ref('stg_erp__sales_order_header') }} as sales_order_header
     left join customers on sales_order_header.customer_id = customers.customer_id
     left join address on sales_order_header.bill_to_address_id = address.address_id
     left join credit_card on sales_order_header.credit_card_id = credit_card.credit_card_id
@@ -103,3 +103,4 @@ with address as(
 
 select *
 from sales
+

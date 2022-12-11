@@ -2,7 +2,7 @@ with customer_cte as (
     select
         customer_id
         , person_id
-    from {{ ref('stg_sales__customer') }}
+    from {{ ref('stg_erp__customer') }}
     where person_id is not null
 )
 
@@ -13,7 +13,7 @@ with customer_cte as (
             when middle_name is null then concat(first_name, ' ', last_name)
             else concat(first_name, ' ', middle_name,'.', ' ', last_name)
         end as customer_name
-    from {{ ref('stg_person__person') }}
+    from {{ ref('stg_erp__person') }}
 )
 
 , joined_tables as(
