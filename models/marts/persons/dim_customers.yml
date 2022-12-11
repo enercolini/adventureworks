@@ -6,17 +6,11 @@ models:
     
     columns:
       - name: customer_sk
-        description: dim_customers primary key. Foreign key to fact_sales.
+        description: Incremental surrugate key. It's dim_customers Primary Key and Foreign key to fact_sales.
         tests:
           - not_null
           - unique
       - name: customer_id
-        description: Customer ID. Primary key to sales.customer.
+        description: Customer ID. Primary key of sales.customer raw data.
       - name: customer_name
         description: Customer's full name.
-      - name: city
-        description: Customer city.
-      - name: state
-        description: Customer state.
-      - name: country
-        description: Customer country.
