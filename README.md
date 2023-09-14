@@ -22,14 +22,6 @@ There are 68 tables divided into 5 schemas:
 
 The ER Adventure Works (OLTP Schema) can be checked through the link <https://raw.githubusercontent.com/dpavancini/analytics-engineering/main/AdventureWorks/AdventureWorksERD.jpeg>
 
-Access for data extraction:
-
-Host: 35.239.223.162
-Port: 5432
-User: stitch_extract
-Password: etl_101_passwd
-Database: Adventureworks
-
 ## BUSINESS QUESTIONS
 
 - What is the number of orders, quantity purchased and total amount negotiated per product, type of card, reason for sale, date of sale, customer, status, city, state and country?
